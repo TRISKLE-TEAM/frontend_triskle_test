@@ -33,7 +33,7 @@ export function ModalAluno({
 
   const handleSubmitNota = handleSubmit(async (data) => {
     if (nota?.id) {
-      const { status, data: data_response } = await api.put(
+      const { status } = await api.put(
         `/nota/${nota?.id}`,
         data
       );
